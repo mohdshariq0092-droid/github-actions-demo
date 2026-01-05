@@ -1,1 +1,10 @@
-print("This is running inside GitHub Actions!")
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "<h1>Hello, Flask + GitHub Actions! 🚀</h1>"
+
+if __name__ == "__main__":
+    app.run(debug=True)
