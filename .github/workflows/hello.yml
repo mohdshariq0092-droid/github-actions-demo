@@ -17,5 +17,5 @@ jobs:
       - name: Install flask
         run: pip install flask
 
-      - name: Run Python file
-        run: python app.py
+#      - name: Run Python file
+#        run: python app.py
