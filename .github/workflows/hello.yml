@@ -1,14 +1,18 @@
-name: Hello GitHub Actions
+name: Python Action
 
 on: [push]
 
 jobs:
-  say-hello:
+  run-python:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print a message
-        run: echo "Hello! GitHub Actions is working 🚀"
+      - uses: actions/checkout@v4
 
-      - name: Show current date
-        run: date
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Run Python file
+        run: python app.py
