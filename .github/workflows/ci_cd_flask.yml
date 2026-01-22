@@ -3,8 +3,8 @@ name: Python CI/CD + Automation + Flask
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: "0 9 * * *"  # daily at 9 AM UTC
+  # schedule:
+  #   - cron: "0 9 * * *"  # daily at 9 AM UTC
 
 jobs:
   test:
